@@ -56,7 +56,7 @@ nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gtd <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
@@ -75,11 +75,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>cr <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>cfs  <Plug>(coc-format-selected)
+nmap <leader>cfs  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -90,11 +90,11 @@ augroup mygroup
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>cas  <Plug>(coc-codeaction-selected)
+nmap <leader>cas  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>ca  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -106,8 +106,8 @@ xmap <silent> <C-Down> <Plug>(coc-range-select-backword)
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 " Remap for do codeAction of current line
-nmap <leader>ff  :Format<cr>
-xmap <leader>ff  :Format<cr>
+nmap <leader>cff  :Format<cr>
+xmap <leader>cff  :Format<cr>
 
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -120,26 +120,26 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Find files
-nnoremap <silent> <space>f  :<C-u>CocList files<cr>
+nnoremap <silent> <leader>sf  :<C-u>CocList files<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>ss  :<C-u>CocList -I symbols<cr>
 " Find recent used files
-nnoremap <silent> <space>e  :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>se  :<C-u>CocList buffers<cr>
 " Find history used files
-nnoremap <silent> <space>h  :<C-u>CocList mru<cr>
+nnoremap <silent> <leader>sh  :<C-u>CocList mru<cr>
 " Search in project
-nnoremap <silent> <space>g  :<C-u>CocList grep<cr>
+nnoremap <silent> <leader>sip  :<C-u>CocList grep<cr>
 " Search in current file
-nnoremap <silent> <space>w  :<C-u>CocList words<cr>
+nnoremap <silent> <leader>sif  :<C-u>CocList words<cr>
 " Find files with current cursor
-nnoremap <silent> <space>fc  :exe 'CocList --input='.expand('<cword>').' files'<cr>
+nnoremap <silent> <leader>sfs  :exe 'CocList --input='.expand('<cword>').' files'<cr>
 " Search workspace symbols with current cursor
-nnoremap <silent> <space>sc  :exe 'CocList -I --input='.expand('<cword>').' symbols'<cr>
+nnoremap <silent> <leader>sss  :exe 'CocList -I --input='.expand('<cword>').' symbols'<cr>
 " Find recent used files with current cursor
-nnoremap <silent> <space>ec  :exe 'CocList --input='.expand('<cword>').' buffers'<cr>
+nnoremap <silent> <leader>ses  :exe 'CocList --input='.expand('<cword>').' buffers'<cr>
 " Find history used files with current cursor
-nnoremap <silent> <space>hc  :exe 'CocList --input='.expand('<cword>').' mru'<cr>
+nnoremap <silent> <leader>shs  :exe 'CocList --input='.expand('<cword>').' mru'<cr>
 " Search in project with current cursor
-nnoremap <silent> <space>gc  :exe 'CocList --input='.expand('<cword>').' grep'<cr>
+nnoremap <silent> <leader>sips  :exe 'CocList --input='.expand('<cword>').' grep'<cr>
 " Search in current file with current cursor
-nnoremap <silent> <space>wc  :exe 'CocList --input='.expand('<cword>').' words'<cr>
+nnoremap <silent> <leader>sifs  :exe 'CocList --input='.expand('<cword>').' words'<cr>
