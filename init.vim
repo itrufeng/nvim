@@ -29,6 +29,9 @@ Plug 'easymotion/vim-easymotion'
 " delimitmate, auto insert closing of quotes
 Plug 'raimondi/delimitmate'
 
+" Use vim and godot engine to make games
+Plug 'habamax/vim-godot'
+
 call plug#end()
 
 " load config from modules

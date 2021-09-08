@@ -1,10 +1,14 @@
 ## Install
 
-1. Install nerd fonts by [this](https://github.com/ryanoasis/nerd-fonts)
-2. Install ripgrep by [this](https://github.com/BurntSushi/ripgrep)
-3. Install neovim
-4. Copy these files into ~/.config/nvim
-5. Execute `:PlugInstall` in neovim
+1. Install [nerd fonts](https://github.com/ryanoasis/nerd-fonts)
+2. Install [ripgrep](https://github.com/BurntSushi/ripgrep)
+3. Install [vim-plug](https://github.com/junegunn/vim-plug)
+4. Install [nodejs by nvm](https://github.com/nvm-sh/nvm)
+5. Install [yarn](https://yarnpkg.com)
+6. Install neovim
+7. git clone https://github.com/itrufeng/nvim.git ~/.config/nvim
+8. Execute `:PlugInstall` in neovim
+9. Set terminal app font to `Hack Nerd Font`
 
 ## Key Mapping
 
