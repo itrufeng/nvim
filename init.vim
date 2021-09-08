@@ -42,3 +42,4 @@ source ~/.config/nvim/vim_airline_themes.config.vim
 source ~/.config/nvim/coc.config.vim
 source ~/.config/nvim/minimalist.config.vim
 source ~/.config/nvim/vim_easymotion.config.vim
+source ~/.config/nvim/vim-godot.config.vim
